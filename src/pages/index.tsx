@@ -1,14 +1,12 @@
 import Head from 'next/head';
-//import Image from 'next/image'
+import Image from 'next/image' //used for images (see README.md)
 import { Bungee_Hairline } from '@next/font/google';
-import { Cutive_Mono } from '@next/font/google';
-import { Alumni_Sans  } from '@next/font/google';
 import styles from '@/styles/Home.module.css';
 
+import Window from './components/Window';
+
 //Fonts
-const BungeeHairline = Bungee_Hairline({weight: "400"});
-const CutiveMono = Cutive_Mono({weight: "400"});
-const AlumniSans = Alumni_Sans({weight: "400"});
+const BungeeHairline  = Bungee_Hairline({weight: "400"});
 
 export default function Home() {
   return (
@@ -23,30 +21,9 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={BungeeHairline.className}>VRP Testing Suite</h1>
         <div id={styles.WindowBoard}>
-          <div className={`${styles.window}`}>
-            <div className={styles.top}>
-              <h3 className={AlumniSans.className}>POS</h3>
-            </div>
-            <div className={styles.bottom}>
-              <p className={CutiveMono.className}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quasi?</p>
-            </div>
-          </div>
-          <div className={`${styles.thirteen} ${styles.window}`}>
-            <div className={styles.top}>
-              <h3 className={AlumniSans.className}>LOGS</h3>
-            </div>
-            <div className={styles.bottom}>
-              <p className={CutiveMono.className}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quasi?</p>
-            </div>
-          </div>
-          <div className={`${styles.window}`}>
-            <div className={styles.top}>
-              <h3 className={AlumniSans.className}>PAYER</h3>
-            </div>
-            <div className={styles.bottom}>
-              <p className={CutiveMono.className}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, quasi?</p>
-            </div>
-          </div>
+          <Window title="POS" />
+          <Window title="LOGS" />
+          <Window title="PAYER" />
         </div>
       </main>
     </>

@@ -42,6 +42,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 # Adams Notes
 
+## Deploying
+https://medium.com/nerd-for-tech/lets-deploy-a-next-js-app-with-firebase-hosting-e070b3aecd04
+
 ## Working with Images
 First import the Image component from the Next lib:
 `import Image from 'next/image'` <br />
