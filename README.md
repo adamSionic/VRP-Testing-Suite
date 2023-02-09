@@ -36,3 +36,21 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+<br />
+<br />
+
+# Adams Notes
+
+## Working with Images
+First import the Image component from the Next lib:
+`import Image from 'next/image'` <br />
+
+To use the `Image` component: <br/>
+```
+<Image src="/vercel.svg" alt="Vercel Logo"
+className={styles.vercelLogo}
+width={100}
+height={24}
+priority />
+```# VRP-Testing-Suite
