@@ -8,6 +8,17 @@ import Window from './components/Window';
 //Fonts
 const BungeeHairline  = Bungee_Hairline({weight: "400"});
 
+const logs = [
+  {
+    time: "04:06:23",
+    message: "A QR Code has been generated"
+  },
+  {
+    time: "04:06:30",
+    message: "Waiting for PAYER to scan code..."
+  },
+]
+
 export default function Home() {
   return (
     <>
@@ -21,9 +32,15 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={BungeeHairline.className}>VRP Testing Suite</h1>
         <div id={styles.WindowBoard}>
-          <Window title="POS" />
-          <Window title="LOGS" />
-          <Window title="PAYER" />
+          <Window active={false} title="POS" loadedContent={
+            <Image src="/rr-qr.jpg" alt="QR Code"
+              className={styles.vercelLogo}
+              width={300}
+              height={300}
+              priority />
+          } />
+          <Window active={true} title="LOGS" loadedText={logs} />
+          <Window active={false} title="PAYER" />
         </div>
       </main>
     </>
