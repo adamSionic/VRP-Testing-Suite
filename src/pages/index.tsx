@@ -10,10 +10,22 @@ const BungeeHairline  = Bungee_Hairline({weight: "400"});
 
 const logs = [
   {
-    time: "04:06:23",
-    message: "A QR Code has been generated"
+    type: "Error",
+    time: "04:05:37",
+    message: "POS attempted login failed."
   },
   {
+    type: "Sucess",
+    time: "04:06:18",
+    message: "POS has been logged in successfully."
+  },
+  {
+    type: "Sucess",
+    time: "04:06:23",
+    message: "A QR Code has been generated."
+  },
+  {
+    type: "Sucess",
     time: "04:06:30",
     message: "Waiting for PAYER to scan code..."
   },
@@ -35,12 +47,12 @@ export default function Home() {
           <Window active={false} title="POS" loadedContent={
             <Image src="/rr-qr.jpg" alt="QR Code"
               className={styles.vercelLogo}
-              width={300}
-              height={300}
+              width={250}
+              height={250}
               priority />
           } />
-          <Window active={true} title="LOGS" loadedText={logs} />
-          <Window active={false} title="PAYER" />
+          <Window active={false} title="LOGS" loadedText={logs} />
+          <Window active={true} title="PAYER" />
         </div>
       </main>
     </>

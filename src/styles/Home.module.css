@@ -103,7 +103,10 @@
   justify-content: space-around;
 }
 
-.logItem {
+.logTime {
+  font-size: .95rem;
+}
+.logMessage {
   margin-bottom: 1rem;
 }
 

@@ -23,8 +23,11 @@ export default function Window(props: {
                 {loadedContent}
               </div>
               <div>
-                { loadedText?.map(item => (
-                    <p className={`${CutiveMono.className} ${styles.logItem}`}> <span style={{color: "aquamarine"}}>{item.time}</span> - {item.message}</p>
+                { loadedText?.map((item, i) => (
+                    <>
+                        <span className={`${CutiveMono.className} ${styles.logTime}`} style={item.type === "Error" ? {color: "crimson"} : {color: "aquamarine"}}>{item.time}</span>
+                        <p key={i} className={`${CutiveMono.className} ${styles.logMessage}`}> {item.message} </p>
+                    </>
                 ))}
               </div>
             </div>
