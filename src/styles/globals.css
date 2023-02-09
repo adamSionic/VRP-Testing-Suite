@@ -68,7 +68,7 @@
 
     --callout-rgb: 20, 20, 20;
     --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
+    --card-rgb: #34313a;
     --card-border-rgb: 200, 200, 200;
   }
 }
@@ -90,9 +90,22 @@ body {
   background: linear-gradient(
       to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
+      rgb(var(#565656))
     )
     rgb(var(--background-start-rgb));
+}
+
+h1 {
+  font-size: 6rem;
+  background: linear-gradient(180deg, #FFFFFF -11.54%, rgba(255, 255, 255, 0.09) 195.1%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 6rem;
+}
+
+h3 {
+  font-size: 2rem;
 }
 
 a {
